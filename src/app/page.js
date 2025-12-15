@@ -1,66 +1,44 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import React from 'react'
+import { CiGlobe } from "react-icons/ci";
+import { FaInstagram, FaWhatsapp  } from "react-icons/fa";
+
+import Btn from './components/Btn';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>To get started, edit the page.js file.</h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className='main_bg'>
+      <section className='main_section'>
+        <div className='box_element'></div>
+        <div className='box_content'>
+          <div className='box_logo_section'>
+            <div className='box_logo_fundo'>
+              <img src='/logo.png' />
+            </div>
+          </div>
+
+          <div className='main_infos'>
+            <h1 className='title'>CodeFlow Studio</h1>
+            <p className='subtitle'>Websites | UX/UI Deseigner</p>
+          </div>
+
+          <div className='btn_section'>
+            <Btn 
+            label="Nosso site" 
+            link="https://codeflowstudio.vercel.app/" 
+            icon={<CiGlobe size={30} />} />
+
+            <Btn 
+            label="Instagram" 
+            link="https://codeflowstudio.vercel.app/" 
+            icon={<FaInstagram size={30} />} />
+
+            <Btn 
+            label="Whatsapp" 
+            link="https://wa.me/13997716553?text=Ol%C3%A1%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es" 
+            icon={<FaWhatsapp size={30} />} />
+          </div>
         </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+      </section>
+    </main>
+  )
 }
