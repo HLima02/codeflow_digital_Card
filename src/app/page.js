@@ -29,7 +29,7 @@ export default function Home() {
 
             <Btn 
             label="Instagram" 
-            link="https://codeflowstudio.vercel.app/" 
+            link="https://www.instagram.com/code.flowstudio?igsh=YWR2Y3pjdGs0NGpz&utm_source=qr" 
             icon={<FaInstagram size={30} />} />
 
             <Btn 
